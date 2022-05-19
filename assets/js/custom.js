@@ -1,15 +1,23 @@
-$(document).ready(function(){
-// On DOM Ready
+$(document).ready(function () {
+  // On DOM Ready
 
-// Notification Click
-$('.dash-nav_noti').click(function(e){
+  // Notification Toggle on click
+  $(".dropdown-parent").click(function (e) {
     e.stopPropagation();
-    $('.nav_notification-wizard').slideToggle();
+    $(".dropdown-content:visible")
+      .not($(this).find(".dropdown-content"))
+      .slideUp();
+    $(this).find(".dropdown-content").slideToggle();
+  });
 
-})
+  // Notification close  on click outside
+  $(document).click(function (e) {
+    if (!$(e.target).closest(".dropdown-content").length) {
+      $(".dropdown-content:visible").slideUp();
+    }
+  });
 
-$(document).click(function(){
-    $('.nav_notification-wizard').slideUp();
-})
-
-})
+  $(".dropdown-content").click(function (e) {
+    e.stopPropagation();
+  });
+});

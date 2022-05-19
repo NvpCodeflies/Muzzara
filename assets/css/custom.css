@@ -121,6 +121,7 @@
   --theme-primary: #ff6464;
   --theme-text: #585858;
   --theme-border-color: #ececec;
+  --shadow-dark: 2px 2px 20px 3px rgba(0, 0, 0, 0.02);
 }
 
 *,
@@ -141,6 +142,11 @@ body {
 ul li,
 ol li {
   list-style-type: none;
+}
+
+
+ul,ol{
+  margin-bottom: 0;
 }
 
 /* Single Product Section Start */
@@ -185,6 +191,7 @@ ol li {
   align-items: center;
   justify-content: center;
   margin-right: 24px;
+  z-index: 1;
 }
 
 .nav_notification_number {
@@ -254,7 +261,7 @@ ol li {
   left: 0;
   border: 1px solid var(--theme-border-color);
   border-radius: 8px;
-  display: none;
+  box-shadow: var(--shadow-dark);
 }
 
 .heading-16 {
@@ -267,7 +274,7 @@ ol li {
 }
 
 .nav_notification-wizard ul {
-  padding: 16px;
+  padding: 8px;
   margin: 0;
 }
 
@@ -280,6 +287,44 @@ ol li {
 
 .nav_notification-wizard ul li:last-child {
   margin-bottom: 0;
+}
+
+.nav_notification-wizard li a {
+  padding: 4px 8px;
+  display: block;
+  border-radius: 4px;
+  color: var(--theme-text);
+  font-weight: 400;
+  transition: 150ms;
+  -webkit-transition: 150ms;
+  -moz-transition: 150ms;
+  -ms-transition: 150ms;
+  -o-transition: 150ms;
+  display: flex;
+  align-items: first baseline;
+}
+
+.nav_notification-wizard li a:hover {
+  text-decoration: none;
+  background-color: #fafafa;
+  color: var(--theme-primary);
+  transition: 150ms;
+  -webkit-transition: 150ms;
+  -moz-transition: 150ms;
+  -ms-transition: 150ms;
+  -o-transition: 150ms;
+}
+
+.nav_notification-wizard li a::before {
+	content: "";
+	width: 5px;
+	height: 5px;
+	background: var(--theme-primary);
+	display: block;
+	border-radius: 50px;
+	margin-right: 8px;
+	flex-shrink: 0;
+	margin-top: calc((21px / 2) - 2.5px);
 }
 
 .dash_outer-row {
@@ -344,4 +389,124 @@ ol li {
   padding: 32px;
 }
 
+
+.dash_content-main-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--theme-border-color);
+}
+
+.dropdown-content{
+  display: none;
+}
+
+.setting-btn {
+	width: 37px;
+	height: 37px;
+  background: #fff;
+	border-radius: 50px;
+	border: 2px solid var(--theme-primary);
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+  margin-right: 16px;
+}
+
+.dash_content-title-actions {
+	display: flex;
+	align-items: center;
+}
+
+.dash_action-setting-content {
+	position: absolute;
+	left: 0;
+	top: calc(100% + 16px);
+	width: 170px;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: var(--shadow-dark);
+	padding: 8px;
+}
+
+.dash_action-setting-content label {
+  margin: 0;
+  padding: 12px 8px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  color: var(--theme-text);
+  align-items: center;
+  font-weight: 500;
+  transition: 150ms;
+  -webkit-transition: 150ms;
+  -moz-transition: 150ms;
+  -ms-transition: 150ms;
+  -o-transition: 150ms;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  cursor: pointer;
+}
+
+.dash_action-setting-content label input[type="radio"]{
+  display: none;
+}
+
+.dash_action-setting-content label:hover{
+  background-color: #fafafa;
+  color: var(--theme-primary);
+}
+
+.choice-indicator {
+	width: 28px;
+	height: 14px;
+	border-radius: 50px;
+	border: 1px solid var(--theme-primary);
+	margin-right: 14px;
+	position: relative;
+}
+
+.choice-indicator::After{
+  content:"";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: 2px;
+  top: 2px;
+  border-radius:50px ;
+  -webkit-border-radius:50px ;
+  -moz-border-radius:50px ;
+  -ms-border-radius:50px ;
+  -o-border-radius:50px ;
+  background-color: var(--theme-primary);
+}
+
+.calendar-btn svg {
+	margin-right: 8px;
+}
+
+.calendar-btn {
+	padding: 9px 8px;
+	border-radius: 8px;
+	border: 2px solid var(--theme-primary);
+	background: #fff;
+	font-weight: 600;
+	line-height: 1;
+	display: flex;
+  color: var(--theme-primary);
+	align-items: center;
+}
+
+.heading-24 {
+	color: #000;
+	font-size: 24px;
+	font-weight: 600;
+	margin: 0;
+}
 /* Dashboard End */
