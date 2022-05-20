@@ -7,13 +7,13 @@ $(document).ready(function () {
     $(".dropdown-content:visible")
       .not($(this).find(".dropdown-content"))
       .slideUp();
-    $(this).find(".dropdown-content").slideToggle();
+    $(this).find(".dropdown-content").slideToggle(150);
   });
 
   // Notification close  on click outside
   $(document).click(function (e) {
     if (!$(e.target).closest(".dropdown-content").length) {
-      $(".dropdown-content:visible").slideUp();
+      $(".dropdown-content:visible").slideUp(150);
     }
   });
 
