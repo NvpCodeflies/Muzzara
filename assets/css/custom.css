@@ -467,8 +467,8 @@ ol {
 }
 
 .toggle-choice input[type="checkbox"]:checked + .choice-indicator::after {
-  left: auto;
-  right: 2px;
+  right: auto;
+  left: 2px;
   transition: 150ms;
   -webkit-transition: 150ms;
   -moz-transition: 150ms;
@@ -500,7 +500,7 @@ ol {
   position: absolute;
   width: 12px;
   height: 12px;
-  left: 2px;
+  right: 2px;
   top: 2px;
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -860,7 +860,7 @@ ol {
 }
 
 
-.funnel_trigger_item input[type="checkbox"][name="trigger_choice"] + .tick_indicator::After{
+.funnel_trigger_item input[type="checkbox"] + .tick_indicator::After{
   content:"";
   position: absolute;
   left: 0;
@@ -879,7 +879,7 @@ ol {
   -o-transition: 150ms;
 }
 
-.funnel_trigger_item input[type="checkbox"][name="trigger_choice"]:checked + .tick_indicator::After{
+.funnel_trigger_item input[type="checkbox"]:checked + .tick_indicator::After{
   opacity: 1;
   transition: 150ms;
   -webkit-transition: 150ms;
@@ -888,7 +888,7 @@ ol {
   -o-transition: 150ms;
 }
 
-.funnel_trigger_item input[type="checkbox"][name="trigger_choice"]:checked + .tick_indicator{
+.funnel_trigger_item input[type="checkbox"]:checked + .tick_indicator{
   border-color:var(--theme-primary);
 }
 
@@ -1005,10 +1005,114 @@ input[type=number] {
   margin-bottom: 24px;
 }
 
-.funnel_stepl-sub-title strong {
+.click_upsell-item-title strong {
 	font-size: 18px;
 	color: #000;
+	font-weight: 600;
+	margin-bottom: 12px;
+}
+
+.click_upsell-item-title {
+	margin-bottom: 12px;
+}
+
+.click_upsell-item-upsell-no {
+	font-size: 14px;
+	font-weight: 600;
+	margin-bottom: 12px;
+}
+
+
+.choose_upsell {
+	padding: 32px;
+	background: #fff;
+	border-radius: 8px;
+	border: 2px dashed #ddd;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+
+.choose_upsell button {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.edit-thankyou-item {
+	background: #fff;
+	border: 1px solid #EBEBEB;
+	border-radius: 8px;
+	padding: 16px 24px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 32px;
+}
+
+.edit-thankyou-content {
+	padding-left: 24px;
+}
+
+.edit-thankyou-content h3 {
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--theme-text-dark);
+	margin-bottom: 8px;
+}
+
+.edit-thankyou-content p {
+	margin: 0;
 	line-height: 1.5;
+}
+
+
+.edit-thankyou-item button {
+	margin-left: 52px;
+	flex-shrink: 0;
+}
+
+.funnel_publish-wrapper h2 {
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 16px;
+}
+
+.funnel_publish-wrapper .toggle-choice {
+	padding: 0;
+	width: auto;
+	display: inline-flex;
+}
+
+.funnel_publish-wrapper .toggle-choice:hover{
+	background-color: transparent;
+}
+
+.dash_setting-item {
+	padding: 24px;
+	background: #fff;
+	border-radius: 8px;
+	border: 1px solid #EBEBEB;
+	margin-bottom: 32px;
+}
+
+.dash_setting-item:last-child {
+	margin-bottom: 0;
+}
+
+.setting_card-title {
+	font-size: 16px;
+	font-weight: 600;
+	color: #000;
+	margin-bottom: 20px;
+}
+
+.form-control::placeholder {
+	color: #919191;
+	opacity: 1;
+	font-size: 12px;
+}
+
+.form-group {
+	margin-bottom: 2rem;
 }
 
 /* Dashboard End */
