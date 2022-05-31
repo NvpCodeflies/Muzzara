@@ -91,6 +91,13 @@ $(document).ready(function () {
   });
 
   
+  // Single producr slider
+
+  $('.single-product_slider').slick({
+    variableWidth:true,
+    infinite:false,
+    swipeToSlide: true,
+  });
 
 
 
