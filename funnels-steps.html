@@ -30,6 +30,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/css/lg-thumbnail.min.css"
     />
 
+    <!-- Jquery UI  -->
+    <link rel="stylesheet" href="assets/css/jqueryui.css">
+
     <!-- Custom Css -->
     <link rel="stylesheet" href="assets/css/custom.css" />
   </head>
@@ -196,7 +199,7 @@
               <h3 class="heading-24 mb-0">Funnel Name</h3>
             </div>
             <div class="dash_content-title-actions">
-              <button class="icon-btn">
+              <button class="icon-btn" data-toggle="modal" data-target="#funnelNameEdit">
                 <svg
                   width="14"
                   height="14"
@@ -468,7 +471,7 @@
                 viewBox="0 0 12 11"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="mr-2"
+                class="mr-1"
               >
                 <path
                   fill-rule="evenodd"
@@ -510,8 +513,65 @@
       </div>
     </section>
 
+    <div
+    class="modal fade funnel-arrange-model"
+    id="funnelNameEdit"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="funnelManage"
+    aria-hidden="true"
+    >
+    
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Funnel Name</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z"
+                    fill="black"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="modal-body px-0">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col">
+                      <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control">
+                      </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button class="theme_btn theme_btn-primary">Save</button>
+            <button class="theme_btn theme_btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- jQuery -->
     <script src="assets/js/jquery.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 
     <!-- Bootstrap js -->
     <script src="assets/js/bootstrap.min.js"></script>

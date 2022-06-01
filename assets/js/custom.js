@@ -40,7 +40,9 @@ $(document).ready(function () {
     //Change to next form
     activeForm.hide();
     $(`[data-step=${nextFormStep}]`).show();
-
+    $('[data-funnel-step]').removeClass('funnel_step-active');
+    $(`[data-funnel-step="${nextFormStep}"]`).addClass('funnel_step-active');
+    
     //Hide prev button on first form visible
     if (formStep + 1 == 1) {
       $(".funnel_step-prev-btn").hide();
@@ -48,14 +50,14 @@ $(document).ready(function () {
       $(".funnel_step-prev-btn").show();
     }
   });
-
+  
   // Funnel Step Form Next Functionality
   $(".funnel_step-prev-btn").click(function () {
     const activeForm = $("[data-step]:visible");
     const formStep = activeForm.attr("data-step");
     const prevFormStep = +formStep - 1;
     const totalSteps = $("[data-step]").length;
-
+    
     //Replace next button with finish button
     if (prevFormStep < totalSteps) {
       $(".funnel_step-next-btn").show();
@@ -64,13 +66,15 @@ $(document).ready(function () {
       $(".funnel_step-next-btn").hide();
       $(".finish-btn").show();
     }
-
+    
     //Change to next form
     activeForm.hide();
     $(`[data-step=${prevFormStep}]`).show();
-
-    // debugger
-
+    $('[data-funnel-step]').removeClass('funnel_step-active');
+    $(`[data-funnel-step="${prevFormStep}"]`).addClass('funnel_step-active');
+    
+    
+    
     //Hide prev button on first form visible
     if (prevFormStep == 1) {
       $(".funnel_step-prev-btn").hide();
@@ -109,8 +113,46 @@ $(document).ready(function () {
 
 
   // special_offer-slider
-
   $('.special_offer-slider').slick({
     slidesToShow:4
   });
+
+
+  // FAQ Accordion
+
+  $('.faq_title').click(function(){
+
+    if($(this).parents('.faq_item').hasClass('active')){
+      $(this).siblings('.faq_content').slideUp();
+      $(this).parents('.faq_item').removeClass('active');
+      return false
+    }
+
+    $('.faq_item').removeClass('active');
+    $('.faq_content').slideUp();
+
+    $(this).siblings('.faq_content').slideDown();
+    $(this).parents('.faq_item').addClass('active');
+
+  })
+
+  // testimonial_image-slider
+  $('.testimonial_image-slider').slick({
+    arrows:false,
+    fade:true,
+    swipe:false
+  })
+
+  //Testimonial Quote slider
+  $('.testimonial_quote-slider').slick({
+    asNavFor:'.testimonial_image-slider',
+    dots:true
+  })
+
+
+  // Funnel Priority 
+  $( ".sortable-table tbody" ).sortable({
+    axis: "y"
+  })
+
 });
