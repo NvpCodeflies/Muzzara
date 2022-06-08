@@ -31,7 +31,7 @@
     />
 
     <!-- Jquery UI  -->
-    <link rel="stylesheet" href="assets/css/jqueryui.css">
+    <link rel="stylesheet" href="assets/css/jqueryui.css" />
 
     <!-- Custom Css -->
     <link rel="stylesheet" href="assets/css/custom.css" />
@@ -199,7 +199,11 @@
               <h3 class="heading-24 mb-0">Funnel Name</h3>
             </div>
             <div class="dash_content-title-actions">
-              <button class="icon-btn" data-toggle="modal" data-target="#funnelNameEdit">
+              <button
+                class="icon-btn"
+                data-toggle="modal"
+                data-target="#funnelNameEdit"
+              >
                 <svg
                   width="14"
                   height="14"
@@ -299,7 +303,7 @@
                       <label for="trigger-product/category" class="mb-0"
                         >Enable product/collection trigger?</label
                       >
-                      <button class="theme_btn theme_btn-primary">
+                      <button class="theme_btn theme_btn-primary" type="button" data-toggle="modal" data-target="#editProductsCollects">
                         Select
                       </button>
                     </div>
@@ -367,10 +371,35 @@
 
                     <h3 class="click_upsell-item-upsell-no">Upsell #1</h3>
                     <div class="choose_upsell">
-                      <button class="theme_btn theme_btn-primary">
+                      <button class="theme_btn theme_btn-primary" data-toggle="modal" data-target="#selectOfferType" type="button">
                         Choose Upsell Product
                       </button>
                     </div>
+
+                    <div class="upsell_chosen my-2 mb-4">
+                      <div class="upsell_choosen-row">
+                        <img src="assets/img/multiproduct.png" alt="">
+                        <div class="upsell_choosen-content">
+                          <h4>Multi Product Upsell</h4>
+                          <p>6 Products</p>
+                        </div>
+                        <div class="upsell_choosen-action">
+                          <button class="upsell_choosen-option  dropdown-parent" type="button"><svg width="23" height="6" viewBox="0 0 23 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.3905 2.41058e-05L19.7612 2.40783e-05C19.7104 0.0142871 19.6641 0.0380588 19.6132 0.0475675C18.2899 0.256758 17.2442 1.38829 17.1563 2.71473C17.0545 4.19808 17.8781 5.45323 19.2199 5.8621C19.3957 5.9144 19.5808 5.95243 19.7612 5.99998L20.3905 5.99998C20.4321 5.98571 20.4691 5.96194 20.5154 5.95719C21.7369 5.75275 22.6669 4.84943 22.9306 3.6133C22.9491 3.51821 22.9769 3.42313 23 3.32804L23 2.68145C22.9861 2.63866 22.963 2.59587 22.9584 2.55308C22.764 1.31695 21.9081 0.375617 20.719 0.0903331C20.6033 0.061807 20.4969 0.0285269 20.3905 8.91295e-07L20.3905 2.41058e-05ZM2.6049 6L3.23419 5.99998C3.28509 5.98571 3.33136 5.96194 3.38225 5.95719C4.71479 5.74324 5.75583 4.60695 5.83911 3.26623C5.93165 1.78763 5.09882 0.53724 3.7524 0.133121C3.58119 0.0808233 3.40539 0.0427892 3.23417 1.4137e-07L2.60492 1.13865e-07C2.56328 0.0142631 2.52626 0.0380348 2.48462 0.0475435C1.28164 0.275752 0.495073 0.993656 0.120298 2.19175C0.0694027 2.34864 0.0416416 2.51504 -1.17002e-07 2.67669L-1.45265e-07 3.32328C0.0138804 3.36607 0.0370147 3.40886 0.0416416 3.45165C0.240596 4.69253 1.09194 5.62914 2.28104 5.9144C2.39208 5.94295 2.4985 5.97147 2.6049 6ZM11.1831 5.99998L11.8124 5.99998C11.8633 5.98571 11.9095 5.96194 11.9604 5.95243C13.2883 5.73849 14.3571 4.55941 14.4127 3.2282C14.4774 1.73058 13.5983 0.461171 12.2427 0.104596C12.0992 0.0665611 11.9558 0.0332809 11.8124 5.16335e-07L11.1831 4.88829e-07C11.1322 0.0142635 11.0859 0.0380352 11.035 0.0475439C9.70714 0.256735 8.63831 1.44056 8.57819 2.77178C8.50879 4.2694 9.39251 5.53881 10.7482 5.89538C10.8962 5.93342 11.0397 5.9667 11.1831 5.99998Z" fill="#383838"/>
+                            </svg>
+
+                            <div class="action-dropdown dropdown-content">
+                              <ul>
+                                <li>Create A/B Test</li>
+                                <li>Delete Offer</li>
+                              </ul>
+                            </div>
+                            </button>
+                           
+                            <button class="theme_btn theme_btn-primary" type="button">Edit</button>
+                        </div>
+                      </div>
+                    </div>  
                   </div>
                 </div>
 
@@ -383,7 +412,7 @@
 
                     <h3 class="click_upsell-item-upsell-no">Upsell #2</h3>
                     <div class="choose_upsell">
-                      <button class="theme_btn theme_btn-primary">
+                      <button class="theme_btn theme_btn-primary" data-toggle="modal" data-target="#selectOfferType" type="button">
                         Choose Upsell Product
                       </button>
                     </div>
@@ -399,7 +428,7 @@
 
                     <h3 class="click_upsell-item-upsell-no">Upsell #3</h3>
                     <div class="choose_upsell">
-                      <button class="theme_btn theme_btn-primary">
+                      <button class="theme_btn theme_btn-primary" data-toggle="modal" data-target="#selectOfferType" type="button">
                         Choose Upsell Product
                       </button>
                     </div>
@@ -504,7 +533,7 @@
             </button>
 
             <button
-              class="theme_btn theme_btn-primary progress-btn finish-btn theme-d-none"
+              class="theme_btn theme_btn-primary progress-btn finish-btn theme-d-none" type="submit"
             >
               Finish
             </button>
@@ -513,19 +542,20 @@
       </div>
     </section>
 
+    <!-- Funnel name edit modal Start -->
+
     <div
-    class="modal fade funnel-arrange-model"
-    id="funnelNameEdit"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="funnelManage"
-    aria-hidden="true"
+      class="modal fade funnel-arrange-model"
+      id="funnelNameEdit"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="funnelManage"
+      aria-hidden="true"
     >
-    
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Edit Funnel Name</h5>
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Funnel Name</h5>
             <button
               type="button"
               class="close"
@@ -549,29 +579,427 @@
             </button>
           </div>
           <div class="modal-body px-0">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col">
-                      <div class="form-group">
-                        <label for="">Name</label>
-                        <input type="text" class="form-control">
-                      </div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" />
                   </div>
                 </div>
               </div>
+            </div>
           </div>
           <div class="modal-footer">
             <button class="theme_btn theme_btn-primary">Save</button>
-            <button class="theme_btn theme_btn-secondary" data-dismiss="modal">Close</button>
+            <button class="theme_btn theme_btn-secondary" data-dismiss="modal">
+              Close
+            </button>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Funnel name edit modal End -->
+
+
+    <!-- Select Offer Modal Start  -->
+
+    <div
+      class="modal fade funnel-arrange-model"
+      id="selectOfferType"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="selectOfferType"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Select Your Offer Type</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z"
+                    fill="black"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <div class="offer_type-wrapper">
+                <div class="offer_type-item" data-toggle="modal" data-target="#selectUpsellProduct">
+                  <h4>Single Product</h4>
+                  <p>Show one compelling offer</p>
+                </div>
+
+                <div class="offer_type-item">
+                  <h4>Multi Product</h4>
+                  <p>Show one compelling offer</p>
+                </div>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Select Offer Modal End -->
+
+
+    <!-- Edit Products/Collections Start -->
+
+    <div
+      class="modal fade funnel-arrange-model"
+      id="editProductsCollects"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="editProductsCollects"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Products/Collections</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z"
+                    fill="black"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <div class="theme_tabs-wrapper">
+                <ul>
+                  <li class="theme_tab-btn active" data-target="#tabProducts">Products</li>
+                  <li class="theme_tab-btn" data-target="#tabCollections">Collections</li>
+                </ul>
+                <div class="form_search">
+                  <input type="text" placeholder="Search Items">
+                </div>
+                <div class="theme_tab-content active" id="tabProducts">
+                    <div class="theme_table-wrap">
+                      <table class="theme_table theme_table-simple">
+                        <thead>
+                          <tr>
+                            <th><input type="checkbox" class="d-none" id="edit_product-selectall"> <label class="checkbox_placeholder" for="edit_product-selectall"></label></th>
+                            <th>Funnel Name</th>
+                            <th>Amount</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <input type="checkbox" class="d-none" id="edit_product-funnel-one"><label class="checkbox_placeholder" for="edit_product-funnel-one"></label>
+                            </td>
+                            <td>
+                              <label for="edit_product-funnel-one">Funnel name one</label>
+                            </td>
+                            <td>
+                              <label for="edit_product-funnel-one">$1,0000</label>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <input type="checkbox" class="d-none" id="edit_product-funnel-two"><label class="checkbox_placeholder" for="edit_product-funnel-two"></label>
+                            </td>
+                            <td>
+                              <label for="edit_product-funnel-two">Funnel name two</label>
+                            </td>
+                            <td>
+                              <label for="edit_product-funnel-two">$1,0000</label>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <input type="checkbox" class="d-none" id="edit_product-funnel-three"><label class="checkbox_placeholder" for="edit_product-funnel-three"></label>
+                            </td>
+                            <td>
+                              <label for="edit_product-funnel-three">Funnel name three</label>
+                            </td>
+                            <td>
+                              <label for="edit_product-funnel-three">$1,0000</label>
+                            </td>
+                          </tr>
+                          <tfoot>
+
+                              <td>
+                                <p class="pagination_count">Showing 5 of 5 results</p>
+                              </td>
+                              <td>
+                                <div class="theme_table-pagination">
+                                  <button class="pagination-btn prev-pagination">
+                                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M8.6665 2.66669L3.6665 7.66669L8.6665 12.6667L7.6665 14.6667L0.666505 7.66669L7.66651 0.666688L8.6665 2.66669Z" fill="#FF6464"></path>
+                                    </svg>
+                                  </button>
+
+                                  <button class="pagination-btn next-pagination">
+                                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M0.333494 12.3333L5.33349 7.33331L0.333496 2.33331L1.3335 0.333313L8.33349 7.33331L1.33349 14.3333L0.333494 12.3333Z" fill="#FF6464"></path>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </td>
+                              <td class="text-right">
+                                <button class="theme_btn theme_btn-primary">Save</button>
+                                <button class="theme_btn theme_btn-secondary" data-dismiss="modal">Close</button>
+                              </td>
+                  
+                          </tfoot>
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+
+                <div class="theme_tab-content" id="tabCollections">
+                  <div class="theme_table-wrap">
+                    <table class="theme_table theme_table-simple">
+                      <thead>
+                        <tr>
+                          <th><input type="checkbox" class="d-none" id="edit_product-selectall"> <label class="checkbox_placeholder" for="edit_product-selectall"></label></th>
+                          <th colspan="2">Collection</th>
+                         
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <input type="checkbox" class="d-none" id="edit_collection-funnel-one"><label class="checkbox_placeholder" for="edit_collection-funnel-one"></label>
+                          </td>
+                          <td colspan="2">
+                            <label for="edit_collection-funnel-one">Funnel Collection one</label>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <input type="checkbox" class="d-none" id="edit_collection-funnel-two"><label class="checkbox_placeholder" for="edit_collection-funnel-two"></label>
+                          </td>
+                          <td colspan="2">
+                            <label for="edit_collection-funnel-two">Funnel Collection Two</label>
+                          </td>
+                        </tr>
+
+
+                        <tr>
+                          <td>
+                            <input type="checkbox" class="d-none" id="edit_collection-funnel-three"><label class="checkbox_placeholder" for="edit_collection-funnel-three"></label>
+                          </td>
+                          <td colspan="2">
+                            <label for="edit_collection-funnel-three">Funnel Collection three</label>
+                          </td>
+                        </tr>
+
+                        
+                        <tfoot>
+
+                            <td>
+                              <p class="pagination_count">Showing 5 of 5 results</p>
+                            </td>
+                            <td>
+                              <div class="theme_table-pagination">
+                                <button class="pagination-btn prev-pagination">
+                                  <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.6665 2.66669L3.6665 7.66669L8.6665 12.6667L7.6665 14.6667L0.666505 7.66669L7.66651 0.666688L8.6665 2.66669Z" fill="#FF6464"></path>
+                                  </svg>
+                                </button>
+
+                                <button class="pagination-btn next-pagination">
+                                  <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.333494 12.3333L5.33349 7.33331L0.333496 2.33331L1.3335 0.333313L8.33349 7.33331L1.33349 14.3333L0.333494 12.3333Z" fill="#FF6464"></path>
+                                  </svg>
+                                </button>
+                              </div>
+                            </td>
+                            <td class="text-right">
+                              <button class="theme_btn theme_btn-primary">Save</button>
+                              <button class="theme_btn theme_btn-secondary" data-dismiss="modal">Close</button>
+                            </td>
+                
+                        </tfoot>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+
+               
+
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Products/Collections End-->
+
+    <!-- Select Upsell Product Start -->
+
+    <div
+      class="modal fade funnel-arrange-model"
+      id="selectUpsellProduct"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="selectUpsellProduct"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Products/Collections</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z"
+                    fill="black"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form_search">
+              <input type="text" placeholder="Search Items">
+            </div>
+            <div class="theme_table-wrap">
+              <table class="theme_table theme_table-simple">
+                <thead>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th>Products</th>
+                    <th>Amount</th>
+                  
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="d-none" id="edit_collection-funnel-first"><label class="checkbox_placeholder" for="edit_collection-funnel-first"></label>
+                    </td>
+                    <td>
+                      <label for="edit_collection-funnel-first">Funnel Collection one</label>
+                    </td>
+                    <td>
+                      <label for="edit_collectio-funneral-first">$1,000</label>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="d-none" id="edit_collection-funnel-second"><label class="checkbox_placeholder" for="edit_collection-funnel-second"></label>
+                    </td>
+                    <td>
+                      <label for="edit_collection-funnel-second">Funnel Collection Two</label>
+                    </td>
+                    <td>
+                      <label for="edit_collectio-funneral-second">$1,000</label>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="d-none" id="edit_collection-funnel-third"><label class="checkbox_placeholder" for="edit_collection-funnel-third"></label>
+                    </td>
+                    <td>
+                      <label for="edit_collection-funnel-third">Funnel Collection three</label>
+                    </td>
+                    <td>
+                      <label for="edit_collectio-funneral-third">$1,000</label>
+                    </td>
+                  </tr>
+
+                  
+                  <tfoot>
+
+                      <td>
+                        <p class="pagination_count">Showing 5 of 5 results</p>
+                      </td>
+                      <td>
+                        <div class="theme_table-pagination">
+                          <button class="pagination-btn prev-pagination">
+                            <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8.6665 2.66669L3.6665 7.66669L8.6665 12.6667L7.6665 14.6667L0.666505 7.66669L7.66651 0.666688L8.6665 2.66669Z" fill="#FF6464"></path>
+                            </svg>
+                          </button>
+
+                          <button class="pagination-btn next-pagination">
+                            <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.333494 12.3333L5.33349 7.33331L0.333496 2.33331L1.3335 0.333313L8.33349 7.33331L1.33349 14.3333L0.333494 12.3333Z" fill="#FF6464"></path>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="text-right">
+                        <button class="theme_btn theme_btn-primary">Save</button>
+                        <button class="theme_btn theme_btn-secondary" data-dismiss="modal">Close</button>
+                      </td>
+          
+                  </tfoot>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Select Upsell Product Start End-->
+
     <!-- jQuery -->
     <script src="assets/js/jquery.min.js"></script>
 
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+    <!-- Popper js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.5/umd/popper.min.js"></script>
 
     <!-- Bootstrap js -->
     <script src="assets/js/bootstrap.min.js"></script>
