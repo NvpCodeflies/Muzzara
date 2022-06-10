@@ -178,6 +178,20 @@ $(document).ready(function () {
     else{
       $(this).parents('.theme_tabs-wrapper').find('input[type="checkbox"]').not(this).prop('checked', false);
     }
+  });
+
+
+  //Onboarding process
+  $('.onboarding-step[data-step="1"] .theme_btn').click(function(e){
+      e.preventDefault();
+      
+    $(this).parents('.onboarding-step').hide();
+    $('.onboarding-step[data-step="2"]').show();
+  })
+
+  $('.onboarding-step[data-step="2"] .theme_btn').click(function(){
+    $(this).parents('.onboarding-step').hide();
+    $('.onboarding-step[data-step="3"]').show();
   })
 
 });
